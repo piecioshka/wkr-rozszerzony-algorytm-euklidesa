@@ -86,10 +86,10 @@
                 i++;
 
                 ui = u$i - qi * ui;
-                u$i = _.last(data)[0];
+                u$i = data[i][0];
 
                 vi = v$i - qi * vi;
-                v$i = _.last(data)[2];
+                v$i = data[i][2];
 
                 ni = ai;
                 ai = ri;
