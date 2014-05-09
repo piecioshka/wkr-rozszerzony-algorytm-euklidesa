@@ -98,8 +98,6 @@
                 ri = ni % ai;
 
                 data.push([ui, u$i, vi, v$i, ni, ai, qi, ri]);
-
-                if (i == 5) break;
             }
 
             return data;
