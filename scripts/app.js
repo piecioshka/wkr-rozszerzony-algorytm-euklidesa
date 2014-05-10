@@ -50,15 +50,29 @@
 
         _checkParams: function () {
             var s = this.settings;
+
             var n = s.first.val();
             var a = s.second.val();
 
-            if (!n.length || !a.length) {
-                alert('Please fill mandatory params');
-                return false;
+            var errors = [];
+            var status;
+
+            if (!(/^\d+$/).test(n)) {
+                errors.push('Incorrect value of "first" param');
             }
 
-            return true;
+            if (!(/^\d+$/).test(a)) {
+                errors.push('Incorrect value of "second" param');
+            }
+
+            if (_.size(errors)) {
+                alert(_.first(errors));
+            }
+
+            // update status by error list
+            status = !_.size(errors);
+
+            return status;
         },
 
         _calculate: function () {
@@ -144,7 +158,8 @@
                 _.each(rows, function (cell, cellIndex) {
                     var $td = $('<td>').text(cell);
                     if (cellIndex >= 4) $td.addClass('warning');
-                    if ((_.size(rows) - 1)=== cellIndex && rowIndex === gcd.index - 1) $td.addClass('danger');
+                    if ((_.size(rows) - 1) === cellIndex && rowIndex === gcd.index - 1) $td.addClass('danger');
+                    if (cellIndex === 2 && rowIndex === gcd.index) $td.addClass('success');
                     $tr.append($td);
                 });
                 $tbody.append($tr);
