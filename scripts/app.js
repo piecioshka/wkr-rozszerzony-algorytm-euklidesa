@@ -17,22 +17,33 @@
         initialize: function () {
             var s = this.settings;
 
-            _.bindAll(this, '_enterHandler', '_submitHandler');
+            _.bindAll(this, '_keyDownHandler', '_submitHandler');
 
             // after click submit do calculation
             s.submit.on('click', this._submitHandler);
 
             // print result on any input have been modify
-            s.first.on('keydown', this._enterHandler);
-            s.second.on('keydown', this._enterHandler);
+            s.first.on('keydown', this._keyDownHandler);
+            s.second.on('keydown', this._keyDownHandler);
 
             // set focus on first input
             s.first.focus();
         },
 
-        _enterHandler: function (e) {
-            // if `enter`
-            if (e.keyCode === 13) {
+        _isEnter: function (e) {
+            return e.keyCode === 13;
+        },
+
+        _isShortcut: function (e) {
+            return e.ctrlKey || e.shiftKey || e.metaKey || e.altKey;
+        },
+
+        _keyDownHandler: function (e) {
+            if (this._isShortcut(e)) {
+                return;
+            }
+
+            if (this._isEnter(e)) {
                 if (this._checkParams()) {
                     this._printResult(this._calculate());
                 }
