@@ -1,15 +1,7 @@
 # Wstęp do kryptologii - rozszerzony algorytm Euklidesa
 
-Mini aplikacja pozwalająca obliczyć GCD (NWD) dwóch liczb.
-
-## Demo
-
-[http://piecioshka.pl/projects/wkr-rozszerzony-algorytm-euklidesa/][1]
+> Mini aplikacja pozwalająca obliczyć GCD (NWD) dwóch liczb.
 
 ## License
 
-[The MIT License][2]
-
-
-[1]: http://piecioshka.pl/projects/wkr-rozszerzony-algorytm-euklidesa/
-[2]: http://piecioshka.mit-license.org/
+[The MIT License](http://piecioshka.mit-license.org/) @ 2014
