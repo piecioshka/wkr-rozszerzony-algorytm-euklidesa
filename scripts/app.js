@@ -1,6 +1,6 @@
 /**
  * @author Piotr Kowalski <piecioshka@gmail.com>
- * @see http://piecioshka.pl/projects/wkr-rozszerzony-algorytm-euklidesa/
+ * @see https://piecioshka.github.io/wkr-rozszerzony-algorytm-euklidesa/
  * @licence The MIT License {@link http://piecioshka.mit-license.org/}
  */
 (function (root, factory) {
