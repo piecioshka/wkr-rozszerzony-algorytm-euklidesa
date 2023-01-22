@@ -2,7 +2,7 @@
 
 Mini aplikacja pozwalająca obliczyć GCD (NWD) dwóch liczb.
 
-## Demo 🎉
+## Preview 🎉
 
 <https://piecioshka.github.io/wkr-rozszerzony-algorytm-euklidesa/>
 
