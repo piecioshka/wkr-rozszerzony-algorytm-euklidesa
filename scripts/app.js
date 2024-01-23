@@ -1,7 +1,7 @@
 /**
  * @author Piotr Kowalski <piecioshka@gmail.com>
  * @see https://piecioshka.github.io/wkr-rozszerzony-algorytm-euklidesa/
- * @licence The MIT License {@link http://piecioshka.mit-license.org/}
+ * @license The MIT License {@link https://piecioshka.mit-license.org/}
  */
 (function (root, factory) {
     root.App = factory(root._);
